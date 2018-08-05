@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" src="tsk.css" />
+  <link rel="stylesheet" type="text/css" href="Header/style.css">
+  <link rel="stylesheet" type="text/css" href="prolibs/toaster.min.css">
+  <link rel="stylesheet" type="text/css" href="prolibs/boot.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="prolibs/angular-ui-router.min.js"></script>
+    <script src="prolibs/jquery.min.js"></script>
+    <script src="prolibs/toaster.js"></script>
+    <script src="prolibs/umdpopper.min.js"></script>
+    <script src="prolibs/boot.min.js"></script>
+    <script src="RouteContrDirec.js"></script>
+     <script src="prolibs/angular-messages.min.js"></script>
+
+</head>
+
+<body ng-app="helloworld">
+  <center><toaster-container toaster-options="{'time-out':4000}"></toaster-container></center>
+  <header class="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <div class="navbar-header">
+                <!-- <a id="toggle-btn" href="#" class="menu-btn"> -->
+                  <!-- <i class="icon-bars"></i>
+                  <i class="fas fa-bars bars-icon"></i> -->
+                <!-- </a> -->
+                <a href="" class="navbar-brand">
+                  <div class="brand-text d-none d-md-inline-block">
+                    <span class="employee-reg">Employee</span>
+                    <strong class="text-primary">Registration</strong>
+                  </div>
+                </a>
+              </div>
+             
+            </div>
+          </div>
+        </nav>
+      </header>
+ <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="">
+                <ul class="nav nav-tabs horizontalmenutab" role="tablist">
+                    <li role="presentation" ui-sref="Form.formdata" ng-class="{active: $state.includes('Form')}"><a href="">AddForm</a></li>
+                    <li role="presentation" 
+                    ui-sref="details.Detaildata" ng-class="{active: $state.current.name=='details.Detaildata'}"><a href="">Views</a></li>
+                                    </ul>
+                <div class="tab-content">
+                   <div role="tabpanel" class="tab-pane active" ui-view="formdata"></div>
+                   <div role="tabpanel" class="tab-pane active" ui-view="Detaildata"></div>
+               </div>
+            </div>
+        </div>
+        <ui-view></ui-view>
+
+</body >
+</html>

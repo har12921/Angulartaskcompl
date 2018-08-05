@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="container-fluid">
+          <!-- Page Header-->
+          
+          <div class="row">
+           
+              <div class="card">
+                <div class="card-header d-flex align-items-center">
+                  <h2>Employee Form</h2>
+                </div>
+                
+                  <form name="myform" novalidate>
+                    <div class="row">
+                 <div class="col-lg-6">
+                    <div class="form-group" ng-class="{'has-error':(myform.name.$invalid) &&(myform.name.$touched ||myform.$submitted) ,'has-success':!myform.name.$invalid}">
+                      <label>Employee Name</label>
+                      <input type="text" placeholder="Name" name="name" ng-model="employer.name"    class="form-control" nu-ll>
+                        <span ng-messages="myform.name.$error" ng-if="myform.name.$touched ||myform.$submitted">
+                      <span ng-message="null" class="text-danger">Enter  Name</span>
+                                        </span>
+                                                        </div>  
+                    </div>
+                    <div class="col-lg-6">
+                            <div class="form-group" >
+                      <label>Gender</label><br>
+                      <input type="radio" ng-init="employer.gender='Male'"  name="gen" ng-model="employer.gender" value="Male" >Male &nbsp;&nbsp;
+                      <input type="radio"  name="gen" ng-model="employer.gender" value="Female">Female
+                           </div>                                            
+                                   </div>
+                      </div>  
+                      <div class="row">
+                                          <div class="col-lg-6">
+                                                       
+                      <div class="form-group" ng-class="{'has-error':(myform.sal.$invalid) &&(myform.sal.$touched ||myform.$submitted) ,'has-success':!myform.sal.$invalid}">
+                      <label>Salary</label>
+                      <input type="number" placeholder="Salary" name="sal" ng-model="employer.salary"    class="form-control" nu-ll>
+                        <span ng-messages="myform.sal.$error" ng-if="myform.sal.$touched ||myform.$submitted">
+                      <span ng-message="null" class="text-danger">Enter Salary</span>
+                                        </span>
+                                                        </div>
+                                                      </div>
+                                               <div class="col-lg-6">
+                             
+                                      <div class="form-group" ng-class="{'has-error':(myform.emails.$invalid) &&(myform.emails.$touched ||myform.$submitted) ,'has-success':!myform.emails.$invalid}">
+                      <label>Email</label>
+                      <input type="text" placeholder="Email" name="emails" ng-model="employer.email"    class="form-control"  email-number>
+                        <span ng-messages="myform.emails.$error" ng-if="myform.emails.$touched ||myform.$submitted">
+                      <span ng-message="null" class="text-danger">{{"Enter Email"}}</span>
+                      <span ng-message="email1" class="text-danger">Please Enter Valid Email Address(abcd@yourmail.com)</span>
+                                        </span>
+
+                                                        </div> 
+                                                        </div>   
+
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6">
+           
+                    <div class="form-group" ng-class="{'has-error':(myform.mobno.$invalid) &&(myform.mobno.$touched ||myform.$submitted) ,'has-success':!myform.mobno.$invalid}">
+                      <label>Mobile Number</label>
+                      <input type="text" placeholder="Mobile Number" name="mobno" ng-model="employer.mobilenumber"    class="form-control" moble-number>
+                        <span ng-messages="myform.mobno.$error" ng-if="myform.mobno.$touched ||myform.$submitted">
+                      <span ng-message="null" class="text-danger">{{"Enter MobileNo"}}</span>
+                      <span ng-message="mob" class="text-danger">MobileNo should eqauls 10digits</span>
+                                        </span>
+
+                                                        </div> 
+                                                      </div>
+                                      <div class="col-lg-6">                        
+                                                          <div class="form-group"  ng-class="{'has-error':(myform.qual.$invalid) &&(myform.qual.$touched ||myform.$submitted) ,'has-success':!myform.qual.$invalid}">
+    <label for="exampleFormControlSelect1">Qualification</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="qual" nu-ll ng-init="qualfictn=''" ng-model="employer.qualification">
+      <option value="">Select</option>>
+      <option>MBA</option>
+      <option>BTECH</option>
+      <option>MCA</option>
+      <option>CA</option>
+    </select>
+         <span ng-messages="myform.qual.$error" ng-if="myform.qual.$touched ||myform.$submitted">
+                      <span ng-message="null" class="text-danger">Select Qualification</span>
+                                        </span>
+  </div>          
+  </div>  
+  </div> 
+<div class="row">
+<div class="col-lg-6">
+  
+
+   <div class="form-group" ng-class="{'has-error':(myform.manag.$invalid) &&(myform.manag.$touched ||myform.$submitted) ,'has-success':!myform.manag.$invalid}">
+                      <label>Manger Name</label>
+                      <input type="text" placeholder="Manager" name="manag" ng-model="employer.Manager"    class="form-control" nu-ll>
+                        <span ng-messages="myform.manag.$error" ng-if="myform.manag.$touched ||myform.$submitted">
+                      <span ng-message="null" class="text-danger">Enter Manger Name</span>
+                                        </span>
+                                                        </div>
+
+                                                      </div>
+                                                      </div>
+             
+                    <div class="form-group">       
+                      <button   class="btn btn-primary" 
+                      ng-click=saveEmployee(myform.$valid,myform)>Signin</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          </div>
+
+</body>
+</html>

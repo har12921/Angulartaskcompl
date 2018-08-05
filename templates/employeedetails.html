@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="container">
+  <h2>Employee Details</h2>
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Employee</th>
+        <th>Gender</th>
+        <th>Salary</th>
+        <th>Email</th>
+        <th>Mobile No</th>
+        <th>Qualification</th>
+        <th>Manager</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="list in getData">
+        <td>{{list.name}}</td>
+        <td>{{list.gender}}</td>
+        <td>{{list.salary}}</td>
+        <td>{{list.email}}</td>
+       <td>{{list.mobilenumber}}</td>
+        <td>{{list.qualification}}</td>
+        <td>{{list.Manager}}</td>
+              </tr>
+     
+    </tbody>
+  </table>
+  
+</div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+
+
+
+
+.horizontalmenutab {
+    border-bottom: 2px solid #DDD;
+   /*  overflow: auto;
+-webkit-overflow-scrolling: touch; */
+}
+
+
+
+/*  .horizontalmenutab > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; } */
+
+.horizontalmenutab>li>a {
+    border: none;
+    color: #666;
+
+}
+
+.horizontalmenutab>li.active>a,
+.nav-tabs>li>a:hover {
+    border: none;
+    color: #4285F4 !important;
+    background: transparent;
+/*     transition: .3s ease-in-out;
+*/     
+}
+
+.horizontalmenutab>li>a::after {
+    content: "";
+    background: #4285F4;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: -1px;
+    transition: all 250ms ease 0s;
+    transform: scale(0);
+}
+
+.horizontalmenutab>li.active>a::after,
+.nav-tabs>li:hover>a::after {
+    transform: scale(1);
+}
+
+.horizontalmenutab>li>a::after {
+    background: #21527d none repeat scroll 0% 0%;
+    color: #fff;
+
+}
+
+.tab-pane {
+    padding: 15px 0;
+}
+.card {
+  margin-bottom: 30px;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card-header h1,
+.card-header h2,
+.card-header h3,
+.card-header h4,
+.card-header h5,
+.card-header h6 {
+  margin-bottom: 0;
+}
+.card {
+  background-color: #fff;
+  border: 0 solid #eee;
+  border-radius: 0;
+}
+
+.card > .list-group:first-child .list-group-item:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.card > .list-group:last-child .list-group-item:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+
+
+
+
+
+.bars-icon{
+  width: 40px;
+    height: 40px;
+    line-height: 40px!important;
+    background: #292929;
+    color: #fff;
+    text-align: center;
+    padding: 0 !important;
+    display: inline-block;
+    margin-left: 55px;
+}
+.d-md-inline-block{
+  display: inline-block;
+}
+nav.navbar a {
+    font-size: .8rem;
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+}
+nav.navbar {
+    background: #393836;
+    padding: .8rem 0;
+}
+.text-primary {
+    color: #33b35a !important;
+    font-size: 2.5em;
+}
+.align-items-md-center{
+  float: right;
+  padding-right: 100px;
+  display: inline-block;
+  list-style-type: none;
+}
+.navbar-header{
+  display: inline-block;
+}
+.sign-out, .employee-reg{
+  margin-left: 5px;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+}
